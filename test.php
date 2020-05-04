@@ -17,6 +17,7 @@ $note = $_GET['note'];
 <input type="text" name="month" size="6" maxlength="4" value=<?php echo ${month}?>><br>
 日を入力<br>
 <input type="text" name="day" size="6" maxlength="4" value=<?php echo ${day}?>><br>
+メモ<br>
 <textarea name="note"><?php echo ${note}?></textarea><br>
 <input type="submit" value="送信"><br>
 </form>
