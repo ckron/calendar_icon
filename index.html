@@ -6,20 +6,21 @@
 <meta name="apple-mobile-web-app-capable" content="no">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
 <title>カレンダーアイコンジェネレーター</title>
-<link rel="apple-touch-icon" href="topIcon.jpg" />
+<link rel="apple-touch-icon" href="topIcon.jpg"/>
+<link rel="stylesheet" href="main.css"/>
 </head>
 
 <body onLoad="pDate()">
 <form action="main.php" method="GET" name="myFORM">
-予定を入力<br>
-<input type="text" name="yotei" size="100%" maxlength="20" value="予定"><br>
-月を入力<br>
-<input type="text" name="month" size="100%" maxlength="4"><br>
-日を入力<br>
-<input type="text" name="day" size="100%" maxlength="4"><br>
-メモ<br>
+<p>予定を入力<br>
+<input type="text" name="yotei" size="100%" maxlength="20" value="予定"></p>
+<p>月を入力<br>
+<input type="text" name="month" size="100%" maxlength="4"></p>
+<p>日を入力<br>
+<input type="text" name="day" size="100%" maxlength="4"></p>
+<p>メモ<br>
 <textarea name="note"></textarea><br>
-<input type="submit" value="送信"><br>
+<input type="submit" value="送信"></p>
 </form>
 </body>
 
