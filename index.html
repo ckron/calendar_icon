@@ -12,15 +12,14 @@
 
 <body onLoad="pDate()">
 <form action="main.php" method="GET" name="myFORM">
-<p>予定を入力<br>
-<input type="text" name="yotei" size="100%" maxlength="20" value="予定" required></p>
-<p>月を入力<br>
-<input type="text" name="month" size="100%" maxlength="4" required></p>
-<p>日を入力<br>
-<input type="text" name="day" size="100%" maxlength="4" required></p>
-<p>メモ<br>
-<textarea name="note"></textarea><br>
-<input type="submit" value="送信"></p>
+<p>
+予定登録(*は必須)<br>
+<input type="text" name="yotei" size="100%" maxlength="20" placeholder="* 予定名を入力" required><br>
+<input type="text" name="month" size="100%" maxlength="4" placeholder="* 月を入力" required><br>
+<input type="text" name="day" size="100%" maxlength="4" placeholder="* 日を入力" required><br>
+<textarea name="note" placeholder="メモを入力"></textarea><br>
+<input type="submit" value="送信">
+</p>
 </form>
 </body>
 

@@ -4,6 +4,14 @@ body {
 }
 
 p {
-    color: 080808;
-    background-color: darkcyan;
+    color: f0f0f0;
+    background-color: midnightblue;
+}
+
+input {
+    margin: 1px;
+}
+
+textarea {
+    margin: 1px;
 }
