@@ -11,7 +11,7 @@ $note = htmlspecialchars($_GET['note'], ENT_QUOTES, "UTF-8");
 <link rel="apple-touch-icon" href=<?php echo "icon/icon_$month_$day.jpg"?>>
 
 <body onLoad="pDate()">
-<form action="test.php" method="GET" name="myFORM">
+<form action="main.php" method="GET" name="myFORM">
 <input type="text" name="yotei" size="30" maxlength="20" value=<?php echo $yotei?>><br>
 月を入力<br>
 <input type="text" name="month" size="6" maxlength="4" value=<?php echo $month?>><br>
