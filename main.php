@@ -8,6 +8,7 @@ $note = htmlspecialchars($_GET['note'], ENT_QUOTES, "UTF-8");
 <title><?php echo $yotei?></title>
 
 <link rel="apple-touch-icon" href=<?php echo "icon/icon_$month_$day.jpg"?>>
+<link rel="stylesheet" href="main.css"/>
 
 <body onLoad="pDate()">
 <form action="main.php" method="GET" name="myFORM">
