@@ -11,14 +11,14 @@ $note = htmlspecialchars($_GET['note'], ENT_QUOTES, "UTF-8");
 <link rel="stylesheet" href="main.css"/>
 
 <body onLoad="pDate()">
-<form action="main.php" method="GET" name="myFORM">
-<p>
-予定登録(*は必須)<br>
-<input type="text" name="yotei" maxlength="20" placeholder="* 予定名を入力" value=<?php echo ${yotei}?> required><br>
-<input type="text" name="month" maxlength="4" placeholder="* 月を入力" value=<?php echo ${month}?> required><br>
-<input type="text" name="day" maxlength="4" placeholder="* 日を入力" value=<?php echo ${day}?> required><br>
-<textarea name="note" placeholder="メモを入力"><?php echo ${note}?></textarea><br>
-<input type="submit" value="送信" class="sbutton">
-</p>
-</form>
+    <form action="main.php" method="GET" name="myFORM">
+        <p>
+            予定登録(*は必須)<br>
+            <input type="text" name="yotei" maxlength="20" placeholder="* 予定名を入力" value=<?php echo ${yotei}?> required><br>
+            <input type="text" name="month" maxlength="4" placeholder="* 月を入力" value=<?php echo ${month}?> required><br>
+            <input type="text" name="day" maxlength="4" placeholder="* 日を入力" value=<?php echo ${day}?> required><br>
+            <textarea name="note" placeholder="メモを入力"><?php echo ${note}?></textarea><br>
+            <input type="submit" value="送信" class="sbutton">
+        </p>
+    </form>
 </body>
