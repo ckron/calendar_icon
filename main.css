@@ -1,19 +1,35 @@
 body {
     color: 000000;
-    background-color: aliceblue;
+    background-color: whitesmoke;
 }
 
 p {
     color: f0f0f0;
-    background-color: midnightblue;
+    background-color: green;
 }
 
-input {
-    margin: 1px;
-    width: 100%;
+input, textarea {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 0.5%;
+    width: 98%;
 }
 
-textarea {
-    margin: 1px;
-    width: 100%;
+.sbutton {
+    display: inline-block;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    padding: 11px 11px;
+    background: whitesmoke;
+    color: green;
+    border: 4px solid gray;
+}
+
+.sbutton:hover {
+    box-shadow: none;
+    color: gainsboro;
+    background: green;
+    border: 4px solid gainsboro
 }
