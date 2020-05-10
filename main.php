@@ -5,10 +5,15 @@ $month = htmlspecialchars($_GET['month'], ENT_QUOTES, "UTF-8");
 $day = htmlspecialchars($_GET['day'], ENT_QUOTES, "UTF-8");
 $note = htmlspecialchars($_GET['note'], ENT_QUOTES, "UTF-8");
 ?>
-<title><?php echo ${yotei}?></title>
 
-<link rel="apple-touch-icon" href=<?php echo "icon/icon_${month}_${day}.jpg"?>>
-<link rel="stylesheet" href="main.css"/>
+<head>
+    <title><?php echo ${yotei}?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
+    <link rel="apple-touch-icon" href=<?php echo "icon/icon_${month}_${day}.jpg"?>>
+    <link rel="stylesheet" href="main.css"/>
+</head>
 
 <body onLoad="pDate()">
     <form action="main.php" method="GET" name="myFORM">
