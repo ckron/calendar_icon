@@ -11,7 +11,9 @@ let note = params.get("note");
 if(yotei !== null) {
   document.title = yotei;
 }
-document.getElementById("icon-link").href = "icon/icon_" + month + "_" + day + ".jpg";
+if(month !== null && day !== null) {
+  document.getElementById("icon-link").href = "icon/icon_" + month + "_" + day + ".jpg";
+}
 document.getElementById("yotei-area").value = yotei;
 document.getElementById("month-area").value = month;
 document.getElementById("day-area").value = day;
