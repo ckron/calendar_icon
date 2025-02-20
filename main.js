@@ -40,7 +40,7 @@ ctx.fillStyle = dark_gray;
 ctx.fillRect(0, 0, width, height);
 
 ctx.fillStyle = "white";
-createFillRoundRect(ctx, 20, 20, width-40, height-40, 20);
+createFillRoundRect(ctx, 30, 30, width-60, height-60, 30);
 
 ctx.fillStyle = dark_gray;
 ctx.font = "bold " + FONT_MONTH_SIZE + "px tahoma";
