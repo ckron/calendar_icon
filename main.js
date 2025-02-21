@@ -1,7 +1,8 @@
 const FONT_MONTH_SIZE = 60;
 const FONT_DAY_SIZE = 150;
 
-const dark_gray = "rgb(50, 50, 50)"
+const DARK_GRAY = "rgb(50, 50, 50)"
+const TRANSPARENT = "rgba(0, 0, 0, 0)"
 
 function createFillRoundRect(ctx, x, y, width, height, radius)
 {
@@ -22,6 +23,31 @@ function createFillRoundRect(ctx, x, y, width, height, radius)
   ctx.fill();
 }
 
+function createIcon(ctx)
+{
+  ctx.fillStyle = TRANSPARENT;
+  ctx.fillRect(0, 0, width, height);
+
+  // background outer
+  ctx.fillStyle = DARK_GRAY;
+  createFillRoundRect(ctx, 10, 10, width-20, height-20, 30);
+
+  // background inner
+  ctx.fillStyle = "white";
+  createFillRoundRect(ctx, 30, 30, width-60, height-60, 30);
+
+  // text month
+  ctx.fillStyle = DARK_GRAY;
+  ctx.font = "bold " + FONT_MONTH_SIZE + "px tahoma";
+  ctx.textAlign = "center";
+  ctx.fillText(("00" + month).slice(-2) + "/", 100, 80, width);
+
+  // text day
+  ctx.textAlign = "center";
+  ctx.font = "bold " + FONT_DAY_SIZE + "px tahoma";
+  ctx.fillText(("00" + day).slice(-2), width/2.0, height-height/5.0, width);
+}
+
 let url = new URL(window.location.href);
 
 let params = url.searchParams;
@@ -36,27 +62,12 @@ let width = canvas.width;
 let height = canvas.height;
 
 const ctx = canvas.getContext("2d");
-ctx.fillStyle = dark_gray;
-ctx.fillRect(0, 0, width, height);
-
-ctx.fillStyle = "white";
-createFillRoundRect(ctx, 30, 30, width-60, height-60, 30);
-
-ctx.fillStyle = dark_gray;
-ctx.font = "bold " + FONT_MONTH_SIZE + "px tahoma";
-ctx.textAlign = "center";
-ctx.fillText(("00" + month).slice(-2) + "/", 100, 80, width);
-
-ctx.textAlign = "center";
-ctx.font = "bold " + FONT_DAY_SIZE + "px tahoma";
-ctx.fillText(("00" + day).slice(-2), width/2.0, height-height/5.0, width);
+createIcon(ctx);
 
 let link = document.createElement("link");
 link.type = "image/icon";
 link.rel = "custom icon";
 link.href = canvas.toDataURL("image/icon");
-
-console.log(link.href);
 
 if(yotei !== null) {
   document.title = yotei;
